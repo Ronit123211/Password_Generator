@@ -1,11 +1,11 @@
 #Password Generator Python(GUI) Program by Ronit!
 
-import tkinter as tk
-from tkinter import messagebox
-import random
 import string
+from tkinter import messagebox
+import tkinter as tk
+import random
 
-def make_password():
+def Make_Password():
     try:
         size = int(length_entry.get())
         if size < 4:
@@ -48,7 +48,7 @@ tk.Checkbutton(root, text="Include lowercase", variable=var_lower).pack(anchor='
 tk.Checkbutton(root, text="Include numbers", variable=var_digits).pack(anchor='w')
 tk.Checkbutton(root, text="Include symbols", variable=var_symbols).pack(anchor='w')
 
-tk.Button(root, text="Make me a password!", command=make_password).pack(pady=10)
+tk.Button(root, text="Generate a password!", command=Make_Password).pack(pady=10)
 
 password_label = tk.Label(root, text="")
 password_label.pack()
