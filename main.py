@@ -3,9 +3,9 @@
 import random
 import string
 
-print("Hey there! Let's make you a secret password nobody can guess.")
+print("Hey there! Let's Generate you a secret password .")
 
-def make_secret(howlong, big_letters, small_letters, numbers, funky_stuff):
+def Make_Secret(howlong, big_letters, small_letters, numbers, funky_stuff):
     stuff = ""
     if big_letters:
         stuff += string.ascii_uppercase
@@ -26,7 +26,7 @@ def make_secret(howlong, big_letters, small_letters, numbers, funky_stuff):
     return result
 
 try:
-    size = int(input("How many letters do you want? (be brave, pick a big number): "))
+    size = int(input("How many letters or words do you want? (be brave, pick a big number): "))
     if size < 4:
         print("Come on, at least 4 characters! Try again next time.")
     else:
@@ -39,7 +39,7 @@ try:
         print("Feeling wild? Add some symbols? (yes/no)")
         want_symbols = input().lower().startswith("y")
 
-        password = make_secret(size, want_big, want_small, want_numbers, want_symbols)
+        password = Make_Secret(size, want_big, want_small, want_numbers, want_symbols)
         if password:
             print("\nHere's your secret pass:")
             print(password)
